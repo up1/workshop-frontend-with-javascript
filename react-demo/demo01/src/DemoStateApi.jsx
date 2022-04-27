@@ -17,6 +17,7 @@ const DemoStateApi = (props) => {
 	return( 
 		<div>
 			All users
+			{console.log("..DONE...")}
 			<ul>
 				{users.map(user => <li key={user.id}>{user.name}</li>)}
 			</ul>
