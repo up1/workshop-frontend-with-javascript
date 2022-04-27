@@ -1,18 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios"
 
-const DemoStateFn = (props) => {
-	const [count, updateCount] = useState(10);
-	const onClicked = (value) => updateCount(count+value)
+const DemoStateApi = (props) => {
+	const [users, setUsers] = useState([]);
 
+	useEffect( () => {
+		console.log("Call effect");
+		axios.get('https://jsonplaceholder.typicode.com/users/')
+		.then(response => {
+			setUsers(response.data)
+		});
+	}, []);
+
+	console.log(users);
+	
 	return( 
 		<div>
-			Counter = {count}
-			<div>
-				<button onClick={() => onClicked(1)}>Increase</button>
-				<button onClick={() => updateCount(currentValue => currentValue+1)}>Increase 2</button>
-			</div>
+			All users
+			<ul>
+				{users.map(user => <li key={user.id}>{user.name}</li>)}
+			</ul>
 		</div>
 	);
 }
 
-export default DemoStateFn;
+export default DemoStateApi;
