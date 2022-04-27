@@ -21,6 +21,7 @@ Done. Now run:
 $cd demo01
 $npm install
 $npm run dev
+$npm run build
 ```
 
 Open url = `http://localhost:3000` in browser
