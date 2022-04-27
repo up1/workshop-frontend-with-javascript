@@ -1,12 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
-import AppC from './AppC'
+import DemoState from './DemoState'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-    <AppC />
+    <DemoState />
   </React.StrictMode>
 )
