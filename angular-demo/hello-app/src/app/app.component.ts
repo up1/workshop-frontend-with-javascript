@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello-app';
+  name = '';
+
+  onTypedName(updateName: string) {
+    this.name = updateName;
+  }
+
+  onTypedName2(event: Event) {
+    this.name = (event.target as HTMLInputElement).value;
+  }
 }
