@@ -1,5 +1,6 @@
 <p>Login page</p>
-
-Email: <input type="text"/><br>
-Password: <input type="password"/><br>
-<button>Login</button>
+<form (ngSubmit)="onLogin()" >
+  Email: <input type="text" [(ngModel)]="form.email" name="email"/><br>
+  Password: <input type="password" [(ngModel)]="form.password" name="password"/><br>
+  <button>Login</button>
+</form>

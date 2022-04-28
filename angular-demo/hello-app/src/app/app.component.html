@@ -1,15 +1,3 @@
-Name 1 : <input type="text" (keyup)="onTypedName2($event)"/><br/>
-
-Name 2 : <input type="text" #nameText (keyup)="onTypedName(nameText.value)"/><br/>
-
-Name 3 : <input type="text" [value]="name" (input)="onTypedName2($event)" /><br/>
-
-<div *ngIf="name; else noName" >Hi {{name}}</div>
-<ng-template #noName>Please enter your name !!</ng-template>
-
-
-<input [(ngModel)]="name">
-<input [ngModel]="name" (ngModelChange)="name = $event">
-
-
-
+<div *ngIf="!isLoggedIn" >
+  <app-login></app-login>
+</div>

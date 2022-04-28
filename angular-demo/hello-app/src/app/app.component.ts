@@ -6,13 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = '';
-
-  onTypedName(updateName: string) {
-    this.name = updateName;
-  }
-
-  onTypedName2(event: Event) {
-    this.name = (event.target as HTMLInputElement).value;
-  }
+  isLoggedIn = false;
 }
