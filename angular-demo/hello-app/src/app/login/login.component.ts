@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from '../services/token.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
     password: null
   };
 
-  constructor() { }
+  constructor(private tokenService: TokenService) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +21,8 @@ export class LoginComponent implements OnInit {
   onLogin() {
     const {email, password} = this.form;
     console.table(this.form);
+    this.tokenService.saveToken("dummy token");
+    window.location.reload();
   }
 
 }
