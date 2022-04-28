@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import DemoStateApi from './DemoStateApi'
+import DemoContext from './DemoContext'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <DemoStateApi />
+    <DemoContext />
   </React.StrictMode>
 )
