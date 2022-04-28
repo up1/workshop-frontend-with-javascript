@@ -1,1 +1,16 @@
-<p>user works!</p>
+<p>List of users</p>
+
+<table>
+<tbody>
+  <td>Id</td>
+  <td>First name</td>
+  <td>Last name</td>
+  <td>Email</td>
+</tbody>
+<tr *ngFor="let user of users">
+  <td>{{user.id}}</td>
+  <td>{{user.firstName}}</td>
+  <td>{{user.lastName}}</td>
+  <td>{{user.email}}</td>
+</tr>
+</table>
