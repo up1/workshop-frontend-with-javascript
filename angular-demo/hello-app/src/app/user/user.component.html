@@ -7,6 +7,7 @@
       <th scope="col">First name</th>
       <th scope="col">Last name</th>
       <th scope="col">Email</th>
+      <th scope="col">Rating</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +16,14 @@
       <td>{{u.firstName}}</td>
       <td>{{u.lastName}}</td>
       <td>{{u.email}}</td>
+      <td>
+        <app-rating
+           [targetScore]=u.score
+           (ratingClicked)="onClickedFromRating($event)"
+           ></app-rating>
+      </td>
     </tr>
   </tbody>
 </table>
+
+{{result}}
